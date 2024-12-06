@@ -2,10 +2,11 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define ONE_WIRE_BUS 2
-#define term_power 4
+#define ONE_WIRE_BUS 2  //порт датчика температуры (данные) D2
+#define term_power 4    // порт датчика температуры (питание) D4
 
-LiquidCrystal_I2C LCD(0x27,20,4);
+LiquidCrystal_I2C LCD(0x27,20,4); //порты дисплея SDA – A4, SCL – A5
+
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature temp(&oneWire);
 
